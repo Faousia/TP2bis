@@ -4,48 +4,55 @@
 int main()
 
 {
+	int i = 0;
+	int somme = 0;
+	int n;
+	//somme des n premiers entiers avec la boucle for
 	
-	int n = 0, b = 0, Max=65535;
+	do{
+		printf("Entrez une valeur: ");
+		scanf_s("%d", &n);
+		for (i = 0; i <= n; i++) {
+			if (n < 361) {
+				somme += i;
+			}
+			
+		}
+	} while (n > 361);
+	printf("La valeur de somme est %d", somme);
 	
-	while (!Max-b>=n)
-	{
-		b = n + b;
-		n = n + 1;
-	}
-	printf("%d\n", b);
-	printf("La valeur de n a ne pas depasser est %d", n);
-	
-	
-	/*
-	scanf_s("Entrez un nombre: %d", &n);
-	for ( n=n+1)
-	{
-		b = b + n;
-	}
-	printf("La somme vaut %d", b);
 
-	return 0;
-	*/
-	
-	/*
-	int i = 1;
-	do
-	{
-		n = n + 1;
-		b = n + b;
-		
-		
-	} 
-	while (n < 100);
-	printf("%d", b);
-	*/
-	/*
-	int i = 1;
-	while (i<n && 65535>i+b)
-	{
+	//somme des n premiers entiers avec la boucle while
+	i = 0;
+	int somme2 = 0;
+	while (i <= 100) {
+		somme2 =somme2+ i;
 		i += 1;
-		b += i;
 	}
-	printf("%d", b);
-	*/
-}
+	printf("\nLa valeur de somme est %d ", somme2);
+
+
+	//somme des n premiers entiers avec la boucle do while
+	i = 0;
+	int somme3 = 0;
+	do {
+		i += 1;
+		somme3 = somme3 + i;
+	} 
+	while (i <= n);
+	printf("\nLa valeur de somme est %d ", somme3);
+
+
+	n = 0;
+	int b = 0, Max = 65535;
+	
+	while (Max-b>=n)
+	{
+		b = n + b;
+		n = n + 1;
+	}
+	printf("\n\nLa somme maximale est %d\n", b);
+	printf("La valeur de n a ne pas depasser est %d", n-1);
+	
+	
+	

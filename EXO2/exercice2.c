@@ -27,18 +27,16 @@ void permute(float* a, float* b, float* c)
 }
 int main()
 {
+	float a, b, c;
 	do
 	{
-		float a = 200, b = 200, c = 200;
-		while (a>150 || b>150 || c>150 || a<0 || b<0 || c<0)
-		{
 			printf("\n Entrez un nombre:");
 			scanf_s("%f", &a);
 			printf("Entrez un deuxieme nombre: ");
 			scanf_s("%f", &b);
 			printf("Entrez un troisieme nombre:");
 			scanf_s("%f", &c);
-		}
+		
 			permute(&a, &b, &c);
 
 		if (a <= 55 && b <= 35 && c <= 25)
@@ -49,7 +47,8 @@ int main()
 		{
 			printf(" NON VALIDE");
 		}
-	} while (1);
+	} 
+	while (1);
 	
 
 
